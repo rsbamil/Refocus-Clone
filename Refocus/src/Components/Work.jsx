@@ -6,7 +6,7 @@ function Work() {
       url: "https://plus.unsplash.com/premium_photo-1683120974913-1ef17fdec2a8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
       top: "50%",
       left: "50%",
-      isActive: false,
+      isActive: true,
     },
     {
       url: "https://plus.unsplash.com/premium_photo-1682310100722-2bbe79fe324e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjUyfHx0ZWNobm9sb2d5fGVufDB8fDB8fHww",
@@ -40,7 +40,7 @@ function Work() {
     },
   ];
   return (
-    <div className="w-full  ">
+    <div className="w-full mt-10 ">
       <div className="max-w-screen-xl mx-auto text-center relative">
         <h1 className="text-[30vw] leading-none font-medium tracking-tight select-none">
           work
@@ -55,6 +55,7 @@ function Work() {
                   style={{
                     top: image.top,
                     left: image.left,
+                    boxShadow: "0 0 10px rgba(100,100,100)",
                   }}
                   alt=""
                 />
