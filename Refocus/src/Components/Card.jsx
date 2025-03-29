@@ -1,9 +1,14 @@
+import { motion } from "motion/react";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-function Card({ width, start, para, hover = "none" }) {
+function Card({ width, start, para, hover = "false" }) {
   return (
-    <div
-      className={`${width} hover:${hover} bg-zinc-800 p-5 rounded-xl min-h-[30rem] flex flex-col justify-between`}
+    <motion.div
+      whileHover={{
+        backgroundColor: hover === "true" && "#7443ff",
+        padding: "30px",
+      }}
+      className={`${width} bg-zinc-800 p-5 rounded-xl min-h-[30rem] flex flex-col justify-between`}
     >
       <div className="w-full ">
         <div className="w-full flex items-center justify-between">
@@ -30,7 +35,7 @@ function Card({ width, start, para, hover = "none" }) {
           </p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

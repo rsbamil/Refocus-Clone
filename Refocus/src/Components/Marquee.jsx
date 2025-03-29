@@ -1,14 +1,30 @@
+/* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 import React from "react";
 
-function Marquee({ imagesUrl }) {
+function Marquee({ imagesurls, direction }) {
   return (
-    <div className="flex w-full py-8 gap-20 whitespace-nowrap overflow-hidden">
-      {imagesUrl.map((img, index) => (
-        <img key={index} className="w-[6vw] flex-shrink-0" src={img} />
-      ))}
-      {imagesUrl.map((img, index) => (
-        <img key={index} className=" flex-shrink-0" src={img} />
-      ))}
+    <div className="flex w-full overflow-hidden">
+      <motion.div
+        initial={{ x: direction === "left" ? "0" : "-100%" }}
+        animate={{ x: direction === "left" ? "-100%" : "0" }}
+        transition={{ repeat: Infinity, ease: "linear", duration: 15 }}
+        className="flex flex-shrink-0 gap-40 py-10 pr-40"
+      >
+        {imagesurls.map((url, index) => (
+          <img key={index} src={url} className="" />
+        ))}
+      </motion.div>
+      <motion.div
+        initial={{ x: direction === "left" ? "0" : "-100%" }}
+        animate={{ x: direction === "left" ? "-100%" : "0" }}
+        transition={{ repeat: Infinity, ease: "linear", duration: 15 }}
+        className="flex flex-shrink-0 gap-40 py-10 pr-40"
+      >
+        {imagesurls.map((url, index) => (
+          <img key={index} src={url} className="" />
+        ))}
+      </motion.div>
     </div>
   );
 }
