@@ -79,13 +79,14 @@ function Products() {
           <motion.div
             animate={{ y: -pos + `rem` }}
             transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
-            className="w-full h-full bg-red-100"
+            className="w-full h-full bg-white"
           >
             <video
               autoPlay
               loop
               muted
-              className="https://cdn.pixabay.com/video/2016/01/29/1992-153555258_tiny.mp4"
+              className="h-full w-full object-cover"
+              src="https://cdn.pixabay.com/video/2016/09/13/5058-182666741_tiny.mp4"
             ></video>
           </motion.div>
           <motion.div
@@ -98,7 +99,7 @@ function Products() {
               loop
               muted
               className="h-full w-full object-cover"
-              src="https://cdn.pixabay.com/video/2024/03/04/202987-919379330_large.mp4"
+              src="https://cdn.pixabay.com/video/2016/02/15/2176-155747466_tiny.mp4"
             ></video>
           </motion.div>
         </motion.div>
